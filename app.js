@@ -14,10 +14,30 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
 
+// Store Connected Users
+let connectedPeers = [];
+
 // Adding SocketIO connection to the server
 io.on("connection", (socket) => {
-    console.log("User connected to SocketIO server.");
+    // Get the connected user's ID
+    console.log("User Connected to SocketIO server");
     console.log(socket.id);
+
+    // Add the connected user to the connected users list
+    connectedPeers.push(socket.id);
+    console.log(connectedPeers);
+
+    // If client disconnects
+    socket.on("disconnect", () => {
+        console.log("User Disconnected");
+
+        // Remove the disconnected user from the connected users list
+        const newConnectedPeers = connectedPeers.filter((peerSocketId) => {
+            peerSocketId !== socket.id;
+        });
+        connectedPeers = newConnectedPeers;
+        console.log(connectedPeers);
+    });
 });
 
 // Server
