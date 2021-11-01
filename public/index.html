@@ -11,8 +11,139 @@
     </head>
     <body>
         <div class="main_container">
-            <div class="dashboard_container"></div>
+            <!-- DASHBOARD -->
+            <div class="dashboard_container">
+                <div class="logo_container">
+                    <img src="./utils/images/logo.png" alt="logo" />
+                </div>
+                <div>
+                    <!-- DESCRIPTION -->
+                    <div class="description_container">
+                        <p class="description_container_paragraph">
+                            Talk with other user by passing his personal code or
+                            talk with strangers!
+                        </p>
+                    </div>
+
+                    <!-- PERSONAL CODE -->
+                    <div class="personal_code_container">
+                        <!-- PERSONAL CODE TITLE -->
+                        <div class="personal_code_title_container">
+                            <p class="personal_code_title_paragraph">
+                                Your personal code
+                            </p>
+                        </div>
+
+                        <!-- PERSONAL CODE VALUE -->
+                        <div class="personal_code_value_container">
+                            <p
+                                class="personal_code_value_paragraph"
+                                id="personal_code_value_paragraph"
+                            >
+                                DDDDDD
+                            </p>
+                            <button
+                                class="personal_code_copy_button"
+                                id="personal_code_copy_button"
+                            >
+                                <img
+                                    src="./utils/images/copyButton.png"
+                                    alt="Copy Personal Code"
+                                />
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <!-- PERSONAL CONNECTION -->
+                    <div class="personal_code_connecting_container">
+                        <p class="personal_code_connecting_paragraph">
+                            Personal Code
+                        </p>
+
+                        <!-- PERSONAL CODE INPUT -->
+                        <div class="personal_code_connecting_input_container">
+                            <input
+                                type="text"
+                                class="personal_code_input"
+                                id="personal_code_input"
+                            />
+                        </div>
+
+                        <!-- PERSONAL CODE BUTTONS -->
+                        <div class="personal_code_connecting_buttons_container">
+                            <button
+                                class="connecting_button"
+                                id="personal_code_chat_button"
+                            >
+                                <img
+                                    src="./utils/images/chatButton.png"
+                                    alt="Personal Chat Button"
+                                    class="connecting_buttons_image"
+                                />
+                            </button>
+                            <button
+                                class="connecting_button"
+                                id="personal_code_video_button"
+                            >
+                                <img
+                                    src="./utils/images/videoButton.png"
+                                    alt="Personal Video Button"
+                                    class="connecting_buttons_image"
+                                />
+                            </button>
+                        </div>
+                    </div>
+    
+                    <!-- STRANGER CONNECTION -->
+                    <div class="stranger_connecting_container">
+                        <!-- STRANGER TITLE -->
+                        <p class="stranger_title_container">
+                            Stranger Code
+                        </p>
+
+                        <!-- STRANGER BUTTONS -->
+                        <div class="stranger_buttons_container">
+                            <button
+                                class="connecting_button"
+                                id="stranger_chat_button"
+                            >
+                                <img
+                                    src="./utils/images/chatButton.png"
+                                    alt="stranger Chat Button"
+                                    class="connecting_buttons_image"
+                                />
+                            </button>
+                            <button
+                                class="connecting_button"
+                                id="stranger_video_button"
+                            >
+                                <img
+                                    src="./utils/images/videoButton.png"
+                                    alt="stranger Video Button"
+                                    class="connecting_buttons_image"
+                                />
+                            </button>
+                        </div>
+                    </div>
+    
+                    <!-- STRANGER CHECKBOX -->
+                    <div class="checkbox_container">
+                        <div class="checkbox_connection" id="allow_strangers_checkbox">
+                            <img id="allow_strangers_checkbox_image" class="" src="./utils/images/check.png"></img>
+                        </div>
+                        <p class="checkbox_container_paragraph">
+                            Allow connection from strangers
+                        </p>
+                    </div>
+                    <!-- DASHBOARD BLUR -->
+                    <div class="dashboard_blur display_none" id="dashboard_blur"></div>
+            </div>
+
+            <!-- CALLER -->
             <div class="call_container"></div>
+
+            <!-- MESSENGER -->
             <div class="messenger_container"></div>
         </div>
     </body>
